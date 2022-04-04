@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+<tr class="student-container" *ngFor="let student of listOfStudents; index as i">        
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <input type="button" (click)="editStudent(i)" value="Edit">
+    <input type="button" (click)="deleteStudent(i)" value="Del">
+</tr>
+</table>
+
+<a routerLink="/new">Create new</a>

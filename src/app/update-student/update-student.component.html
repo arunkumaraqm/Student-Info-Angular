@@ -1,0 +1,18 @@
+<p>update-student form</p>
+
+<div class="form-group" >
+    <form > 
+        <input type="text" placeholder="student name"
+            [(ngModel)] = "student.name" name="name field"
+        >
+        <input type="text" placeholder="student age"
+            [(ngModel)] = "student.age" name="age field"
+        >
+
+        <input type="submit" value="Submit" (click) = "updateStudent() && redirect();">
+        <p *ngIf = "student.name">student name is {{student.name}}</p>
+    
+    </form>
+
+</div>
+
